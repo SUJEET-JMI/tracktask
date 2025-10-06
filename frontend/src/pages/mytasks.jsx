@@ -14,7 +14,7 @@ const MyTasks = () => {
   const fetchMyTasks = async () => {
     try {
       const resp = await API.get('/api/tasks');
-      setTasks(resp.data);
+      setTasks(resp.data.tasks || []);
     } catch (err) {
       console.error(err);
     }

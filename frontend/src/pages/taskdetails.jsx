@@ -22,7 +22,7 @@ const TaskDetails = () => {
 
   const fetchTask = async () => {
     try {
-      const resp = await API.get(`/tasks/${id}`);
+      const resp = await API.get(`/api/tasks/${id}`);
       setTask(resp.data);
       setFormData({
         title: resp.data.title || '',
@@ -44,7 +44,7 @@ const TaskDetails = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await API.put(`/tasks/${id}`, formData);
+      await API.put(`/api/tasks/${id}`, formData);
       alert('Task updated successfully');
       navigate('/my-tasks');
     } catch (err) {

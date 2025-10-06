@@ -106,7 +106,7 @@ const Dashboard = () => {
                     <input type="date" value={newTask.dueDate} onChange={(e) => setNewTask({...newTask, dueDate: e.target.value})} className="px-3 py-2 border border-gray-300 rounded-md" />
                     <select value={newTask.assignedTo} onChange={(e) => setNewTask({...newTask, assignedTo: e.target.value})} className="px-3 py-2 border border-gray-300 rounded-md" required>
                       <option value="">Assign to Employee</option>
-                      {employees.map(emp => <option key={emp} value={emp}>{emp}</option>)}
+                      {employees.map(emp => <option key={emp.id} value={emp.id}>{emp.name}</option>)}
                     </select>
                   </div>
                   <button type="submit" className="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md font-medium">Create Task</button>
@@ -176,7 +176,7 @@ const Dashboard = () => {
                   <p className="text-sm text-gray-500 mb-2">Status: {t.status}</p>
                   {t.tags && <p className="text-sm text-gray-500 mb-2">Tags: {t.tags}</p>}
                   {t.dueDate && <p className="text-sm text-gray-500">Due: {new Date(t.dueDate).toLocaleDateString()}</p>}
-                  {user?.role === 'admin' && t.assignedTo && <p className="text-sm text-gray-500">Assigned to: {t.assignedTo}</p>}
+                  {user?.role === 'admin' && t.assignee && <p className="text-sm text-gray-500">Assigned to: {t.assignee.name}</p>}
                 </div>
               </div>
             ))}
