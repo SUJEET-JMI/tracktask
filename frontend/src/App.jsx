@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/authcontext.jsx';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Home from './pages/home';
-import MyBooks from './pages/mybooks';
-import Requests from './pages/requests';
-import BookDetails from './pages/bookdetails';
+import Dashboard from './pages/dashboard';
+import MyTasks from './pages/mytasks';
+import TaskDetails from './pages/taskdetails';
 
 function App() {
   return (
@@ -19,31 +18,23 @@ function App() {
             path="/"
             element={
               <RequireAuth>
-                <Home />
+                <Dashboard />
               </RequireAuth>
             }
           />
           <Route
-            path="/my-books"
+            path="/my-tasks"
             element={
               <RequireAuth>
-                <MyBooks />
+                <MyTasks />
               </RequireAuth>
             }
           />
           <Route
-            path="/requests"
+            path="/task/:id"
             element={
               <RequireAuth>
-                <Requests />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="/book/:id"
-            element={
-              <RequireAuth>
-                <BookDetails />
+                <TaskDetails />
               </RequireAuth>
             }
           />

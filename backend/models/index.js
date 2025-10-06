@@ -1,8 +1,7 @@
 const sequelize = require('../config/db');
 
 const User = require('./user');
-const Book = require('./book');
-const BookRequest = require('./bookrequest');
+const Task = require('./task');
 
 // (The associations were defined inside each model file already)
 
@@ -15,6 +14,5 @@ module.exports = {
   sequelize,
   syncModels,
   User,
-  Book,
-  BookRequest
+  Task
 };
