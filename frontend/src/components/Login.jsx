@@ -31,7 +31,7 @@ const Login = () => {
             </svg>
           </div>
           <h1 className="text-4xl font-bold mb-4">Welcome Back!</h1>
-          <p className="text-xl opacity-90">Continue your reading journey with  Task Management System</p>
+          <p className="text-xl opacity-90">Continue managing your tasks with Task Tracker</p>
           <div className="mt-8 flex justify-center space-x-4">
             <div className="w-3 h-3 bg-white rounded-full animate-bounce"></div>
             <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
@@ -52,7 +52,7 @@ const Login = () => {
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Sign In</h2>
-            <p className="text-gray-600">Access your  Task Management System account</p>
+            <p className="text-gray-600">Access your Task Tracker account</p>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

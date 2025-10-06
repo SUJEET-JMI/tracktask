@@ -1,4 +1,4 @@
-# Task Management System
+# Task Tracker
 
 A full-stack web application for managing personal tasks with user authentication, built with React, Node.js, Express, and PostgreSQL.
 
@@ -136,7 +136,7 @@ JWT_SECRET=your_super_secret_jwt_key_here
 3. **For the backend**, consider using a process manager like PM2:
    ```bash
    npm install -g pm2
-   pm2 start server.js --name "task-management-backend"
+   pm2 start server.js --name "task-tracker-backend"
    ```
 
 ## Usage
@@ -178,7 +178,7 @@ For testing purposes, you can use the following account:
 ## Project Structure
 
 ```
-task-management-system/
+task-tracker/
 ├── backend/
 │   ├── config/
 │   │   ├── config.js

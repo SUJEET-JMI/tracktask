@@ -14,8 +14,8 @@ const Task = sequelize.define('Task', {
   },
   description: DataTypes.TEXT,
   status: {
-    type: DataTypes.ENUM('pending', 'in_progress', 'completed'),
-    defaultValue: 'pending'
+    type: DataTypes.ENUM('Pending', 'In Progress', 'Completed'),
+    defaultValue: 'Pending'
   },
   tags: DataTypes.STRING, // comma-separated or JSON array
   dueDate: DataTypes.DATE
@@ -24,7 +24,7 @@ const Task = sequelize.define('Task', {
 });
 
 // Relations:
-Task.belongsTo(User, { foreignKey: 'userId', as: 'owner' });
-User.hasMany(Task, { foreignKey: 'userId', as: 'tasks' });
+Task.belongsTo(User, { foreignKey: 'assignedTo', as: 'assignee' });
+User.hasMany(Task, { foreignKey: 'assignedTo', as: 'tasks' });
 
 module.exports = Task;

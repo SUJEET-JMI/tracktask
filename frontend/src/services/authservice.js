@@ -1,7 +1,7 @@
 import API from './api';
 
 export const signup = async (data) => {
-  const resp = await API.post('/api/auth/signup', data);
+  const resp = await API.post('/api/auth/register', data);
   return resp.data;
 };
 
