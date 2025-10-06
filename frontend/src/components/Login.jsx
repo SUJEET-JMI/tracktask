@@ -31,14 +31,14 @@ const Login = () => {
             </svg>
           </div>
           <h1 className="text-4xl font-bold mb-4">Welcome Back!</h1>
-          <p className="text-xl opacity-90">Continue your reading journey with  BookSwap Marketplace</p>
+          <p className="text-xl opacity-90">Continue your reading journey with  Task Management System</p>
           <div className="mt-8 flex justify-center space-x-4">
             <div className="w-3 h-3 bg-white rounded-full animate-bounce"></div>
             <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
             <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
           </div>
         </div>
-        {/* Floating books animation */}
+        {/* Floating Task Management Systems animation */}
         <div className="absolute top-10 left-10 animate-float">
           <div className="w-8 h-12 bg-white rounded-sm shadow-lg transform rotate-12"></div>
         </div>
@@ -52,7 +52,7 @@ const Login = () => {
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Sign In</h2>
-            <p className="text-gray-600">Access your  BookSwap Marketplace account</p>
+            <p className="text-gray-600">Access your  Task Management System account</p>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

@@ -31,8 +31,8 @@ const Signup = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold mb-4">Join  BookSwap Marketplace!</h1>
-          <p className="text-xl opacity-90">Start sharing and discovering amazing books</p>
+          <h1 className="text-4xl font-bold mb-4">Join  Task Management System!</h1>
+          <p className="text-xl opacity-90">Start sharing and discovering amazing Task Management Systems</p>
           <div className="mt-8 flex justify-center space-x-4">
             <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
             <div className="w-3 h-3 bg-white rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
@@ -53,7 +53,7 @@ const Signup = () => {
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Create Account</h2>
-            <p className="text-gray-600">Join the  BookSwap Marketplace community</p>
+            <p className="text-gray-600">Join the  Task Management System community</p>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
