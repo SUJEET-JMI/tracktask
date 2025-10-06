@@ -156,16 +156,17 @@ JWT_SECRET=your_super_secret_jwt_key_here
 ### Authentication Endpoints
 - `POST /api/auth/register` - Register a new user
 - `POST /api/auth/login` - Login with existing credentials
+- `GET /api/auth/users` - Get all users (admin only)
 
 ### Task Endpoints
-- `GET /tasks` - Retrieve all tasks (supports query parameters for filtering)
-- `POST /tasks` - Create a new task
-- `GET /tasks/:id` - Get a specific task by ID
-- `PUT /tasks/:id` - Update a task
-- `DELETE /tasks/:id` - Delete a task
+- `GET /api/tasks` - Retrieve all tasks (supports query parameters for filtering)
+- `POST /api/tasks` - Create a new task
+- `GET /api/tasks/:id` - Get a specific task by ID
+- `PUT /api/tasks/:id` - Update a task
+- `DELETE /api/tasks/:id` - Delete a task
 
-**Query Parameters for GET /tasks:**
-- `status`: Filter by task status (pending, in_progress, completed)
+**Query Parameters for GET /api/tasks:**
+- `status`: Filter by task status (Pending, In Progress, Completed)
 - `tags`: Filter by tags
 
 ## Test Account
@@ -227,7 +228,7 @@ This project is licensed under the ISC License.
 ## Deployment
 
 The frontend of this Task Management System is deployed on Vercel and can be accessed at:  
-[https://richmonks.vercel.app/](https://richmonks.vercel.app/)
+[https://tracktask-amber.vercel.app/](https://tracktask-amber.vercel.app/)
 
 The backend API and PostgreSQL database are hosted on Render.
 
