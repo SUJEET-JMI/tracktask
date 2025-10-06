@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
+app.use('/tasks', taskRoutes);
 
 const start = async () => {
   try {
