@@ -41,4 +41,17 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { signup, login };
+const getUsers = async (req, res) => {
+  if (req.user.role !== 'admin') {
+    return res.status(403).json({ message: 'Access denied' });
+  }
+  try {
+    const users = await User.findAll({ attributes: ['id', 'name', 'email', 'role'] });
+    res.json(users);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+module.exports = { signup, login, getUsers };

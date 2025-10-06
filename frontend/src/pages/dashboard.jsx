@@ -27,7 +27,7 @@ const Dashboard = () => {
       if (statusFilter) params.status = statusFilter;
       if (tagFilter) params.tags = tagFilter;
       const resp = await API.get('/api/tasks', { params });
-      setTasks(resp.data);
+      setTasks(resp.data.tasks || []);
     } catch (err) {
       console.error(err);
     }
@@ -35,11 +35,8 @@ const Dashboard = () => {
 
   const fetchEmployees = async () => {
     try {
-      // Assuming there's an endpoint for employees, or fetch from tasks
-      // For now, assume we can get unique assignedTo
-      const resp = await API.get('/api/tasks');
-      const uniqueEmployees = [...new Set(resp.data.map(t => t.assignedTo).filter(Boolean))];
-      setEmployees(uniqueEmployees);
+      const resp = await API.get('/api/auth/users');
+      setEmployees(resp.data.filter(u => u.role === 'employee'));
     } catch (err) {
       console.error(err);
     }
